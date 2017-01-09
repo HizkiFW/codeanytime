@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	
+	"name": "CodeAnyTime",
+	"description": "A plugin hacked together to integrate Codeanywhere and WakaTime",
+	"version": "1.0.0",
+	
+	"permissions": [
+		"tabs",
+		"https://wakatime.com/api/v1/",
+		"storage"
+	],
+	"background" : {
+		"page": "background.html"
+	},
+	"options_page": "options.html",
+	"browser_action": {
+		"default_icon": "icon-small.png",
+		"default_popup": "options.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://codeanywhere.com/editor/*"],
+			"js": ["jQuery.js", "inject.js"],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"16": "icon-tiny.png",
+		"48": "icon-small.png",
+		"128": "icon.png"
+	}
+}
