@@ -21,9 +21,9 @@ window.onkeydown = function(e) {
 }
 
 function getChromeVersion() {     
-    var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+	var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
 
-    return raw ? parseInt(raw[2], 10) : false;
+	return raw ? parseInt(raw[2], 10) : false;
 }
 
 function heartbeat(file, project) {
@@ -46,6 +46,7 @@ function heartbeat(file, project) {
 				"Content-Type": "application/json",
 				"Authorization": "Basic " + k,
 				//"User-Agent": "wakatime/1.0.0 (Chrome " + getChromeVersion() + ") JavaScript CodeAnyTime"
+				//Doesn't work for security reasons
 			},
 			dataType: 'raw',
 			success: function(data) {
