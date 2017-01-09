@@ -12,12 +12,3 @@ String.prototype.decodeHTML = function() {
         }
     });
 };
-
-chrome.tabs.onActivated.addListener(function(info) {
-	var id = info.tabId;
-	chrome.tabs.get(id, function(tab) {
-		if(tab.url.includes("codeanywhere")) {
-			
-		}
-	});
-});
