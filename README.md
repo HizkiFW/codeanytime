@@ -1,7 +1,7 @@
-#codeanytime
+# codeanytime
 WakaTime integration for CodeAnywhere on Google Chrome
 
-##Installation
+## Installation
 ![Developer Mode](http://i.imgur.com/Iz4Y1fU.png)
 
 1. Clone or download all the files into a folder
